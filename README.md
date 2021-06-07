@@ -58,18 +58,6 @@ Some fields do not auto-populate based off of the attributes.
 - JQuery scrolling animations
 - Options now allows to collapse and expand all panels.
 
-### Future Updates & Goals:
-- Code clean-up: a lot of the HTML and CSS needs to be cleaned up to remove depreciated references, be more consistent, and be easier to read.
-- Fine tuning and tweaks to UI.
-- Better documentation going forward.
-- Add Help & documentation as a menu item and/or page.
-- Add additional functionality:
-    - Auto calculate more fields.
-    - Better image handling & selection.
-    - Allow user to select a save sheet to load from.
-    - Make usable online.
-    - Hover Tool-Tips for fields.
-
 ---
 
 ## Issue Reporting & Pull Requests.
