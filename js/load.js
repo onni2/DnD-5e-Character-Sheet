@@ -6,7 +6,7 @@ $(document).ready(function(argument) {
 
     //Change the title to the character name
     if (loadJson.page1.basic_info.char_name)
-        document.title = loadJson.page1.basic_info.char_name;
+        document.title = loadJson.page1.basic_info.char_name + " - D&D 5e Character Sheet";
 
     //Load Basic Info
     $('#character-basic-info #basic-info input[name="char-name"]').val(loadJson.page1.basic_info.char_name);
