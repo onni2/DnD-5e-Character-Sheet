@@ -53,8 +53,10 @@ Some fields do not auto-populate based off of the attributes.
 ## Changes & Planned Updates.
 ### Changes:
 ##### Single Page Layout
-- Testing functionality of a single page layout.
-- 
+- Single Page layout working.
+- Better JQuery.
+- JQuery scrolling animations
+- Options now allows to collapse and expand all panels.
 
 ### Future Updates & Goals:
 - Code clean-up: a lot of the HTML and CSS needs to be cleaned up to remove depreciated references, be more consistent, and be easier to read.
