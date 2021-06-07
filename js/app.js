@@ -6,11 +6,35 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
 }
 
-function expandPanel(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
+$(document).ready(function() {
+    $("#collapse-all").click(function() {
+        $(".collapse").slideUp();
+    });
+});
+
+$(document).ready(function() {
+    $("#expand-all").click(function() {
+        $(".collapse").slideDown();
+    });
+});
+
+$(document).ready(function() {
+    $(".expando").click(function() {
+        $(this).next().slideToggle();
+    });
+});
+
+$(document).ready(function() {
+    $("#scroll-to-top").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, 1000);
+        return false;
+    });
+});
+
+$(document).ready(function() {
+    $(".scrollTo").click(function() {
+        var position = $($(this).attr("href")).offset().top;
+        $("html, body").animate({ scrollTop: position }, 1000);
+        return false;
+    });
+});

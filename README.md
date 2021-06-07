@@ -52,32 +52,9 @@ Some fields do not auto-populate based off of the attributes.
 
 ## Changes & Planned Updates.
 ### Changes:
-##### Hotfixes -v2.1.1:
-- Fixed an issue where data from the .json character sheet were not loading.
-- Input Boxes that are auto filled or adjusted are now highlighted in a different color.
-- Menu now has a 'Help' section (to explain color highlight for example).
-##### Fixes & Formatting -v2.1:
-- Fixed the 'Attack' section not displaying.
-- Formatted HTML, CSS, JS files to be easier to read and have a consistent spacing & tabbing.
-- Tweaked the layout of the 'Attributes' page.
-- Added an additional 'Mount/Pet' section to allow for easier management of multiple pets/mounts.
-- Fixed some spelling errors.
-- Tweaked design of the Inventory & Mount page.
-##### Initial Commit -v2.0:
-- HTML and CSS re-worked to use w3's responsive layout.
-- The sheet should now be usuable 95% of the time on any screen size.
-- Re-structered the layout of fields to hopefully provide easier access to most used stats & information.
-- Re-wrote 90% of the CSS to have a more modern design theory.
-- Re-made menu to be easier to use + use as navigation.
-- Broke down major elements to be on seperate 'pages' instead of everything being on one long page.
-- Updated existing Jquery to work with changes.
-- Added additional JS to add features:
-    - New Menu design.
-    - Section cards can be collapsed.
-    - Switching between 'pages' (displaying/hiding \<div>'s).
-- Added an additional 'Class/Level' section to make it easier to multi-class.
-- Basic character information remains on top of the page as a header.
-- Added a 'Notes' page for generic notes.
+##### Single Page Layout
+- Testing functionality of a single page layout.
+- 
 
 ### Future Updates & Goals:
 - Code clean-up: a lot of the HTML and CSS needs to be cleaned up to remove depreciated references, be more consistent, and be easier to read.
