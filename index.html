@@ -25,18 +25,18 @@
     <!-- Sidebar -->
     <!--
 	page-1: Attributes
-	page-2: Equipment
+	page-2: Equipment (Inv. & NPCs)
 	page-3: Spell Sheet
 	page-4: Backstory
 	page-5: Notes
 -->
     <div class="w3-sidebar w3-bar-block w3-border-right w3-flat-clouds w3-animate-left" style="display:none" id="mySidebar">
         <button onclick="w3_close()" class="w3-bar-item w3-large w3-button w3-hover-blue-gray">Close &times;</button>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-1'); w3_close()">Attributes</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-4'); w3_close()">Backstory</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-2'); w3_close()">Inv. & NPCs</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-3'); w3_close()">Spell Sheet</a>
-        <a href="#" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="openPage('page-5'); w3_close()">Notes</a>
+        <a href="#page-1" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="w3_close()">Attributes</a>
+        <a href="#page-4" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="w3_close()">Backstory</a>
+        <a href="#page-2" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="w3_close()">Inv. & NPCs</a>
+        <a href="#page-3" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="w3_close()">Spell Sheet</a>
+        <a href="#page-5" class="w3-bar-item w3-button w3-hover-blue-gray" onclick="w3_close()">Notes</a>
         <div class="w3-dropdown-hover">
             <button class="w3-button w3-hover-blue-gray">Options <i class="fa fa-caret-down"></i></button>
             <div id="menu-options" class="w3-dropdown-content w3-bar-block w3-animate-right">
@@ -677,7 +677,7 @@
         <!-- Page 2 -->
         <!-- Page 2 -->
         <!-- Page 2 -->
-        <div id="page-2" class="page w3-container w3-content w3-margin-top" style="display:none">
+        <div id="page-2" class="page w3-container w3-content w3-margin-top">
             <!-- Equipment -->
             <div class="w3-col w3-margin-bottom w3-card w3-round">
                 <button onclick="expandPanel('equipment')" class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Inventory</button>
@@ -871,7 +871,7 @@
         <!-- Page 3 -->
         <!-- Page 3 -->
         <!-- Page 3 -->
-        <div id="page-3" class="page w3-container w3-content w3-margin-top" style="display:none">
+        <div id="page-3" class="page w3-container w3-content w3-margin-top">
             <!-- Spell Info -->
             <div class="w3-col w3-margin-bottom w3-card w3-round">
                 <button onclick="expandPanel('spell-info')" class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Spell Info</button>
@@ -1522,7 +1522,7 @@
         <!-- Page 4 -->
         <!-- Page 4 -->
         <!-- Page 4 -->
-        <div id="page-4" class="page w3-container w3-content w3-margin-top" style="display:none">
+        <div id="page-4" class="page w3-container w3-content w3-margin-top">
             <!-- Personality -->
             <div class="w3-col w3-margin-bottom w3-card w3-round">
                 <button onclick="expandPanel('personality')" class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Personality</button>
@@ -1577,7 +1577,7 @@
         <!-- Page 5 -->
         <!-- Page 5 -->
         <!-- Page 5 -->
-        <div id="page-5" class="page w3-container w3-content w3-margin-top" style="display:none">
+        <div id="page-5" class="page w3-container w3-content w3-margin-top">
             <!-- Notes -->
             <div class="w3-col w3-margin-bottom w3-card w3-round">
                 <button onclick="expandPanel('notes-page')" class="expando w3-button w3-bar-block w3-left-align w3-blue-gray">Notes</button>
