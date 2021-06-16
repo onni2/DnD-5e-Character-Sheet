@@ -86,7 +86,7 @@
     <div class="container-fluid main-container bg">
         <!-- Top Row -->
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6" style="margin-top:-25px">
+            <div class="col-sm-12 col-md-12 col-lg-12" style="margin-top:-25px">
                 <!-- Attributes -->
                 <div class="row h-100 text-center">
                     <!--<div class="col-sm-12 section-header"><span class="label">Attributes</span></div>-->
@@ -132,18 +132,15 @@
                             <li class="list-group-item"><input type="text" class="att-mod" name="cha-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <!-- Prof, Speed, Hit Points -->
-            <div class="col-sm-12 col-md-12 col-lg-6" style="margin-top:-25px">
-                <div class="row pb-2 text-center">
-                    <div id="proficiency" class="col-6 col-sm-4 col-md-4 col-lg-3">
+                    <!-- Proficiency -->
+                    <div id="proficiency" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Proficiency Bonus</span></li>
                             <li class="list-group-item" style="margin-top: 10%;"><input class="font-125" type="text" name="speed" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                    <div id="speed" class="col-6 col-sm-4 col-md-4 col-lg-3">
+                    <!-- Speed -->
+                    <div id="speed" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Speed</span></li>
                             <li class="list-group-item" style="margin-top: 10%;">
@@ -152,7 +149,7 @@
                         </ul>
                     </div>
                     <!-- Hit Points -->
-                    <div id="hit-points" class="col-sm-6 col-md-4 col-lg">
+                    <div id="hit-points" class="col-sm-8 col-md-6 col-lg mb-2" style="margin-right: auto;margin-left: auto;">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Hit Points</span></li>
                             <li class="list-group-item">
@@ -233,15 +230,38 @@
                 <!-- Senses-->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
                     <div class="col-sm-12 section-header"><span class="label">Senses</span></div>
-                    <div id="saves" class="col-12">
-
+                    <div id="senses" class="col-12">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><input class="auto-filled-border" type="text" name="passive-perception" maxlength="2" size="2" /></td>
+                                    <td>Passive WIS (Perception)</td>
+                                </tr>
+                                <tr>
+                                    <td><input class="auto-filled-border" type="text" name="passive-investigation" maxlength="2" size="2" /></td>
+                                    <td>Passive INT (Investigation)</td>
+                                </tr>
+                                <tr>
+                                    <td><input class="auto-filled-border" type="text" name="passive-insight" maxlength="2" size="2" /></td>
+                                    <td>Passive WIS (Insight)</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><textarea name="senses" style="width: 100%;"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <!-- Profenciencies & Languages -->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
                     <div class="col-sm-12 section-header"><span class="label">Profenciencies & Languages</span></div>
-                    <div id="saves" class="col-12">
-
+                    <div id="prof-lang" class="col-12">
+                        <ul class="list-group list-group-flush" style="border-top: 1px solid #dee2e6;">
+                            <li class="list-group-item" style="border: 0;">ARMOR<textarea name="prof-armor" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item">WEAPONS<textarea name="prof-weapons" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item">TOOLS<textarea name="prof-tools" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item">LANGUAGES<textarea name="prof-languages" style="width: 100%;"></textarea></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -398,22 +418,92 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-pills">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="#hit-points">Status</a>
+                                <a class="nav-link active" data-toggle="pill" href="#menu0">Combat</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu1">Backstory</a>
+                                <a class="nav-link" data-toggle="pill" href="#menu1">Actions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu2">Items</a>
+                                <a class="nav-link" data-toggle="pill" href="#menu2">Spells</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu3">Items</a>
+                                <a class="nav-link" data-toggle="pill" href="#menu3">Equipment</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="col-12 my-2 pb-2 text-center">
+                        <!-- Status & Life -->
+                        <div class="row">
+                            <div class="col-sm-12 section-header"><span class="label">General Stats</span></div>
+                            <div id="hit-points" class="col-sm-6 col-md-4 col-lg-4">
+                                <div id="temp-health" class="w3-col w3-padding">
+                                    <input type="text" name="temp-health" />
+                                    <br/>
+                                    <span class="label w3-padding">Temporary Health</span>
+                                </div>
+                                <div id="current-health" class="w3-col s6 m6 l6">
+                                    <input type="text" name="current-health" />
+                                    <br/>
+                                    <span class="label">Current Health</span>
+                                </div>
+                                <div id="max-health" class="w3-col s6 m6 l6">
+                                    <input type="text" name="max-health" />
+                                    <br/>
+                                    <span class="label">Maximum Health</span>
+                                </div>
+                            </div>
+                            <div id="hit-dice" class="col-sm-6 col-md-4 col-lg-2">
+                                <span class="label">Hit Dice</span>
+                                <div>
+                                    <ul class="list-group-flush">
+                                        <li class="list-group-item"><span class="sub-label">Current</span><input class="label" type="text" name="current-hd" maxlength="2" size="2" /></li>
+                                        <li class="list-group-item"><input type="text" name="hit-dice" maxlength="4" size="4" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="death-saves" class="col-sm-6 col-md-4 col-lg-2">
+                                <span class="label">Death Saves</span>
+                                <div id="successes">
+                                    <span class="sub-label">Success</span>
+                                    <div id="success-num">
+                                        <input class="w3-check" type="checkbox" name="success-1" />
+                                        <input class="w3-check" type="checkbox" name="success-2" />
+                                        <input class="w3-check" type="checkbox" name="success-3" />
+                                    </div>
+                                </div>
+                                <div id="failures" class="">
+                                    <span class="sub-label">Failure</span>
+                                    <div id="failure-num">
+                                        <input class="w3-check" type="checkbox" name="failure-1" />
+                                        <input class="w3-check" type="checkbox" name="failure-2" />
+                                        <input class="w3-check" type="checkbox" name="failure-3" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="conditions" class="col-sm-6 col-md-4 col-lg-2">
+                                <span class="label">Conditions</span>
+                                <textarea name="conditions" rows="5"></textarea>
+                            </div>
+                            <div id="boons" class="col-sm-6 col-md-4 col-lg-2">
+                                <span class="label">Boons</span>
+                                <textarea name="boons" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row my-2 pb-2 bg-white shadow-sm rounded">
+                    <nav id="navbar" class="navbar col-12 border border-right-0 border-top-0 border-left-0">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#menu4">Features & Traits</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu4">Items</a>
+                                <a class="nav-link" data-toggle="pill" href="#menu5">Backstory</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu5">Items</a>
+                                <a class="nav-link" data-toggle="pill" href="#menu6">Notes</a>
                             </li>
                         </ul>
                     </nav>
