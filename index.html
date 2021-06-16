@@ -58,342 +58,281 @@
 -->
 
 <body>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top border-bottom border-secondary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Nav Extension -->
+    <div class="bg-dark navbar-dark" style="height: 125px;display: flex;position: static;">
 
-
+    </div>
     <!-- Main Container -->
-    <div class="container-fluid main-container" style="margin-top:60px">
-        <!-- Navbar -->
-        <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <div class="container-fluid main-container bg">
+        <!-- Top Row -->
         <div class="row">
-            <div id="left-col" class="col mx-2">
-                <!-- Bonuses -->
-                <div class="row my-2 pb-2 text-center">
-                    <div class="col-sm-12 section-header"><span class="label">General Stats</span></div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Proficiency Bonus</span></li>
-                            <li class="list-group-item"><input class="stat" type="text" name="proficiency" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Initiative Bonus</span></li>
-                            <li class="list-group-item"><input class="stat" type="text" name="initiative" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Passive Perception</span></li>
-                            <li class="list-group-item"><input class="stat" class="auto-filled-border" type="text" name="passive-perception" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Armor Class</span></li>
-                            <li class="list-group-item"><input class="stat" type="text" name="ac" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Move Speed</span></li>
-                            <li class="list-group-item"><input class="stat" type="text" name="speed" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Spell Save DC</span></li>
-                            <li class="list-group-item"><input class="stat" class="auto-filled-border" type="text" name="spell-dc" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Insperation Count</span></li>
-                            <li class="list-group-item"><input class="stat" type="text" name="insperation" maxlength="2" size="2" /></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 mx-2" style="margin-top:-25px">
                 <!-- Attributes -->
                 <div class="row my-2 pb-2 text-center">
-                    <div class="col-sm-12 section-header"><span class="label">Attributes</span></div>
-                    <div id="str" class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
+                    <!--<div class="col-sm-12 section-header"><span class="label">Attributes</span></div>-->
+                    <div id="str" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Strength</span></li>
                             <li class="list-group-item"><input type="text" class="att" name="str" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod auto-filled-border" name="str-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                    <div id="dex" class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
+                    <div id="dex" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Dexterity</span></li>
                             <li class="list-group-item"><input type="text" class="att" name="dex" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="dex-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                    <div id="con" class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
+                    <div id="con" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Constitution</span></li>
                             <li class="list-group-item"><input type="text" class="att" name="con" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="con-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                    <div id="int" class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
+                    <div id="int" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Intelligence</span></li>
                             <li class="list-group-item"><input type="text" class="att" name="int" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="int-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                    <div id="wis" class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
+                    <div id="wis" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Wisdom</span></li>
                             <li class="list-group-item"><input type="text" class="att" name="wis" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="wis-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-                    <div id="cha" class="col-sm-6 col-md-4 col-lg">
-                        <ul class="list-group-flush">
+                    <div id="cha" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Charisma</span></li>
                             <li class="list-group-item"><input type="text" class="att" name="cha" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="cha-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
+
                 </div>
-                <!-- Saves & Skills -->
-                <div class="row text-left">
-                    <div class="col-sm-12 section-header"><span class="label">Skills & Saving Throws</span></div>
+            </div>
+        </div>
+        <!-- Left and Center Columns -->
+        <div class="row">
+            <!-- Left Col -->
+            <div id="left-col" class="col mx-2">
+                <!-- Saves -->
+                <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
+                    <div class="col-sm-12 section-header"><span class="label">Saving Throws</span></div>
                     <div id="saves" class="col-12">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item"><span class="label">Saving Throws</span></li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="text" name="str-save" maxlength="2" size="2" />
-                                <span class="sub-label">Strength</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="text" name="dex-save" maxlength="2" size="2" />
-                                <span class="sub-label">Dexterity</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="text" name="con-save" maxlength="2" size="2" />
-                                <span class="sub-label">Constitution</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="text" name="int-save" maxlength="2" size="2" />
-                                <span class="sub-label">Intelligence</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="text" name="wis-save" maxlength="2" size="2" />
-                                <span class="sub-label">Wisdom</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="text" name="cha-save" maxlength="2" size="2" />
-                                <span class="sub-label">Charisma</span>
-                            </li>
-                        </ul>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Prof</th>
+                                    <th>Name</th>
+                                    <th>Bonus</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>Strength</td>
+                                <td><span id="str-save">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>Dexterity</td>
+                                <td><span id="dex-save">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>Constitution</td>
+                                <td><span id="con-save">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>Intelligence</td>
+                                <td><span id="int-save">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>Wisdom</td>
+                                <td><span id="wis-save">+0</span></td>
+                            </tr>
 
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>Charisma</td>
+                                <td><span id="cha-save">+0</span></td>
+                            </tr>
+                        </table>
                     </div>
-                    <!-- Strength -->
+                </div>
+                <!-- Skills -->
+                <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
+                    <div class="col-sm-12 section-header"><span class="label">Skills</span></div>
                     <div id="skills" class="col-12">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item">
-                                <span class="label">Strength</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="sub-label">Prof</span> /
-                                <span class="sub-label">Expr</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="checkbox" name="expr" />
-                                <input type="text" name="athletics-skill" maxlength="3" size="3" />
-                                <span class="sub-label">Athletics</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- Dexterity -->
-                    <div id="skills" class="col-12">
-                        <ul class="list-group-flush">
-                            <li class="list-group-item">
-                                <span class="label">Dexterity</span>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="sub-label">Prof</span> /
-                                <span class="sub-label">Expr</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="checkbox" name="expr" />
-                                <input type="text" name="acrobatics-skill" maxlength="3" size="3" />
-                                <span class="sub-label">Acrobtics</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="checkbox" name="expr" />
-                                <input type="text" name="sleight-hand-skill" maxlength="3" size="3" />
-                                <span class="sub-label">Sleight of Hand</span>
-                            </li>
-                            <li class="list-group-item">
-                                <input type="checkbox" name="prof" />
-                                <input type="checkbox" name="expr" />
-                                <input type="text" name="stealth-skill" maxlength="3" size="3" />
-                                <span class="sub-label">Stealth</span>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <div id="skills" class="col-12">
-                        <div>
-                            <span class="label">Intelligence</span>
-                        </div>
-                        <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
-                        </div>
-                        <div id="arcana-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="arcana-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Arcana</span>
-                        </div>
-                        <div id="history-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="history-skill" maxlength="3" size="3" />
-                            <span class="sub-label">History</span>
-                        </div>
-                        <div id="investigation-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="investigation-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Investigation</span>
-                        </div>
-                        <div id="religion-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="religion-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Religion</span>
-                        </div>
-                    </div>
-                    <div id="skills" class="col-12">
-                        <div>
-                            <span class="label">Wisdom</span>
-                        </div>
-                        <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
-                        </div>
-                        <div id="animal-handling-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="animal-handling-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Animal Handling</span>
-                        </div>
-                        <div id="insight-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="insight-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Insight</span>
-                        </div>
-                        <div id="medicine-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="medicine-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Medicine</span>
-                        </div>
-                        <div id="nature-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="nature-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Nature</span>
-                        </div>
-                        <div id="perception-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="perception-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Perception</span>
-                        </div>
-                        <div id="survival-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="survival-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Survival</span>
-                        </div>
-                    </div>
-                    <div id="skills" class="col-12">
-                        <div>
-                            <span class="label">Charisma</span>
-                        </div>
-                        <div>
-                            <span class="sub-label">Prof</span>
-                            <span class="sub-label">Expr</span>
-                        </div>
-                        <div id="deception-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="deception-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Deception</span>
-                        </div>
-                        <div id="intimidation-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="intimidation-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Intimidation</span>
-                        </div>
-                        <div id="performance-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="performance-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Performance</span>
-                        </div>
-                        <div id="persuasion-skill" class="box">
-                            <input type="checkbox" name="prof" />
-                            <input type="checkbox" name="expr" />
-                            <input type="text" name="persuasion-skill" maxlength="3" size="3" />
-                            <span class="sub-label">Persuasion</span>
-                        </div>
-                    </div>
-                    <div id="spell-att" class="col-sm-6 col-md-4 col-lg-2">
-                        <div>
-                            <span class="label">Spell Save DC</span>
-                        </div>
-                        <select name="spell-att">
-                                <option value="none">No Spell Casting</option>
-                                <option value="dex">Dexterity</option>
-                                <option value="str">Strength</option>
-                                <option value="int">Intelligence</option>
-                                <option value="con">Constitution</option>
-                                <option value="cha">Charisma</option>
-                                <option value="wis">Wisdom</option>
-                            </select>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Prof</th>
+                                    <th>Expr</th>
+                                    <th>MOD</th>
+                                    <th>Name</th>
+                                    <th>Bonus</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>DEX</td>
+                                <td>Acrobatics</td>
+                                <td><span id="acrobatics-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>WIS</td>
+                                <td>Animal Handling</td>
+                                <td><span id="animal-handling-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>INT</td>
+                                <td>Arcana</td>
+                                <td><span id="arcana-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>STR</td>
+                                <td>Athletics</td>
+                                <td><span id="athletics-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>CHA</td>
+                                <td>Deception</td>
+                                <td><span id="deception-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>INT</td>
+                                <td>History</td>
+                                <td><span id="history-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>WIS</td>
+                                <td>Insight</td>
+                                <td><span id="insight-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>CHA</td>
+                                <td>Intimidation</td>
+                                <td><span id="intimidation-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>INT</td>
+                                <td>Investigation</td>
+                                <td><span id="investigation-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>WIS</td>
+                                <td>Medicine</td>
+                                <td><span id="medicine-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>INT</td>
+                                <td>Nature</td>
+                                <td><span id="nature-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>WIS</td>
+                                <td>Perception</td>
+                                <td><span id="perception-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>CHA</td>
+                                <td>Performance</td>
+                                <td><span id="performance-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>CHA</td>
+                                <td>Persuasion</td>
+                                <td><span id="persuasion-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>INT</td>
+                                <td>Religion</td>
+                                <td><span id="religion-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>DEX</td>
+                                <td>Sleight of Hand</td>
+                                <td><span id="sleight-hand-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>DEX</td>
+                                <td>Stealth</td>
+                                <td><span id="stealth-skill">+0</span></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input type="checkbox" name="prof" /></td>
+                                <td>WIS</td>
+                                <td>Survival</td>
+                                <td><span id="survival-skill">+0</span></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
+            <!-- Center Col -->
             <div id="center-col" class="col-md-12 col-lg-9 mx-2">
-                <!-- -->
-                <div class="row my-2 pb-2">
+                <div class="row my-2 pb-2 bg-white shadow-sm rounded">
                     <nav id="navbar" class="navbar col-12 border border-right-0 border-top-0 border-left-0">
                         <!-- Nav tabs -->
                         <ul class="nav nav-pills">
@@ -475,220 +414,7 @@
                                 <textarea name="boons" rows="5"></textarea>
                             </div>
                         </div>
-                        <!-- Saves & Skills -->
-                        <div class="row text-left">
-                            <div class="col-sm-12 section-header"><span class="label">Skills & Saving Throws</span></div>
-                            <div id="saves" class="col-sm-6 col-md-4 col-lg-2">
-                                <ul class="list-group-flush">
-                                    <li class="list-group-item"><span class="label">Saving Throws</span></li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="text" name="str-save" maxlength="2" size="2" />
-                                        <span class="sub-label">Strength</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="text" name="dex-save" maxlength="2" size="2" />
-                                        <span class="sub-label">Dexterity</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="text" name="con-save" maxlength="2" size="2" />
-                                        <span class="sub-label">Constitution</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="text" name="int-save" maxlength="2" size="2" />
-                                        <span class="sub-label">Intelligence</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="text" name="wis-save" maxlength="2" size="2" />
-                                        <span class="sub-label">Wisdom</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="text" name="cha-save" maxlength="2" size="2" />
-                                        <span class="sub-label">Charisma</span>
-                                    </li>
-                                </ul>
 
-                            </div>
-                            <!-- Strength -->
-                            <div id="skills" class="col-sm-6 col-md-4 col-lg-2">
-                                <ul class="list-group-flush">
-                                    <li class="list-group-item">
-                                        <span class="label">Strength</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="sub-label">Prof</span> /
-                                        <span class="sub-label">Expr</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="checkbox" name="expr" />
-                                        <input type="text" name="athletics-skill" maxlength="3" size="3" />
-                                        <span class="sub-label">Athletics</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Dexterity -->
-                            <div id="skills" class="col-sm-6 col-md-4 col-lg-2">
-                                <ul class="list-group-flush">
-                                    <li class="list-group-item">
-                                        <span class="label">Dexterity</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <span class="sub-label">Prof</span> /
-                                        <span class="sub-label">Expr</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="checkbox" name="expr" />
-                                        <input type="text" name="acrobatics-skill" maxlength="3" size="3" />
-                                        <span class="sub-label">Acrobtics</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="checkbox" name="expr" />
-                                        <input type="text" name="sleight-hand-skill" maxlength="3" size="3" />
-                                        <span class="sub-label">Sleight of Hand</span>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <input type="checkbox" name="prof" />
-                                        <input type="checkbox" name="expr" />
-                                        <input type="text" name="stealth-skill" maxlength="3" size="3" />
-                                        <span class="sub-label">Stealth</span>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <div id="skills" class="col-sm-6 col-md-4 col-lg-2">
-                                <div>
-                                    <span class="label">Intelligence</span>
-                                </div>
-                                <div>
-                                    <span class="sub-label">Prof</span>
-                                    <span class="sub-label">Expr</span>
-                                </div>
-                                <div id="arcana-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="arcana-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Arcana</span>
-                                </div>
-                                <div id="history-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="history-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">History</span>
-                                </div>
-                                <div id="investigation-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="investigation-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Investigation</span>
-                                </div>
-                                <div id="religion-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="religion-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Religion</span>
-                                </div>
-                            </div>
-                            <div id="skills" class="col-sm-6 col-md-4 col-lg-2">
-                                <div>
-                                    <span class="label">Wisdom</span>
-                                </div>
-                                <div>
-                                    <span class="sub-label">Prof</span>
-                                    <span class="sub-label">Expr</span>
-                                </div>
-                                <div id="animal-handling-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="animal-handling-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Animal Handling</span>
-                                </div>
-                                <div id="insight-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="insight-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Insight</span>
-                                </div>
-                                <div id="medicine-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="medicine-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Medicine</span>
-                                </div>
-                                <div id="nature-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="nature-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Nature</span>
-                                </div>
-                                <div id="perception-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="perception-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Perception</span>
-                                </div>
-                                <div id="survival-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="survival-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Survival</span>
-                                </div>
-                            </div>
-                            <div id="skills" class="col-sm-6 col-md-4 col-lg-2">
-                                <div>
-                                    <span class="label">Charisma</span>
-                                </div>
-                                <div>
-                                    <span class="sub-label">Prof</span>
-                                    <span class="sub-label">Expr</span>
-                                </div>
-                                <div id="deception-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="deception-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Deception</span>
-                                </div>
-                                <div id="intimidation-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="intimidation-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Intimidation</span>
-                                </div>
-                                <div id="performance-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="performance-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Performance</span>
-                                </div>
-                                <div id="persuasion-skill" class="box">
-                                    <input type="checkbox" name="prof" />
-                                    <input type="checkbox" name="expr" />
-                                    <input type="text" name="persuasion-skill" maxlength="3" size="3" />
-                                    <span class="sub-label">Persuasion</span>
-                                </div>
-                            </div>
-                            <div id="spell-att" class="col-sm-6 col-md-4 col-lg-2">
-                                <div>
-                                    <span class="label">Spell Save DC</span>
-                                </div>
-                                <select name="spell-att">
-                                        <option value="none">No Spell Casting</option>
-                                        <option value="dex">Dexterity</option>
-                                        <option value="str">Strength</option>
-                                        <option value="int">Intelligence</option>
-                                        <option value="con">Constitution</option>
-                                        <option value="cha">Charisma</option>
-                                        <option value="wis">Wisdom</option>
-                                    </select>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
