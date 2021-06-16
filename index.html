@@ -86,60 +86,104 @@
     <div class="container-fluid main-container bg">
         <!-- Top Row -->
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 mx-2" style="margin-top:-25px">
+            <div class="col-sm-12 col-md-12 col-lg-6" style="margin-top:-25px">
                 <!-- Attributes -->
-                <div class="row my-2 pb-2 text-center">
+                <div class="row h-100 text-center">
                     <!--<div class="col-sm-12 section-header"><span class="label">Attributes</span></div>-->
                     <div id="str" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Strength</span></li>
-                            <li class="list-group-item"><input type="text" class="att" name="str" maxlength="2" size="2" /></li>
+                            <li class="list-group-item"><input class="font-125" type="text" class="att" name="str" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod auto-filled-border" name="str-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
                     <div id="dex" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Dexterity</span></li>
-                            <li class="list-group-item"><input type="text" class="att" name="dex" maxlength="2" size="2" /></li>
+                            <li class="list-group-item"><input class="font-125" type="text" class="att" name="dex" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="dex-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
                     <div id="con" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Constitution</span></li>
-                            <li class="list-group-item"><input type="text" class="att" name="con" maxlength="2" size="2" /></li>
+                            <li class="list-group-item"><input class="font-125" type="text" class="att" name="con" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="con-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
                     <div id="int" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Intelligence</span></li>
-                            <li class="list-group-item"><input type="text" class="att" name="int" maxlength="2" size="2" /></li>
+                            <li class="list-group-item"><input class="font-125" type="text" class="att" name="int" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="int-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
                     <div id="wis" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Wisdom</span></li>
-                            <li class="list-group-item"><input type="text" class="att" name="wis" maxlength="2" size="2" /></li>
+                            <li class="list-group-item"><input class="font-125" type="text" class="att" name="wis" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="wis-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
                     <div id="cha" class="col-6 col-sm-4 col-md-4 col-lg mb-2">
                         <ul class="list-group-flush shadow-sm bg-white rounded h-100">
                             <li class="list-group-item"><span class="label">Charisma</span></li>
-                            <li class="list-group-item"><input type="text" class="att" name="cha" maxlength="2" size="2" /></li>
+                            <li class="list-group-item"><input class="font-125" type="text" class="att" name="cha" maxlength="2" size="2" /></li>
                             <li class="list-group-item"><input type="text" class="att-mod" name="cha-mod" maxlength="2" size="2" /></li>
                         </ul>
                     </div>
-
+                </div>
+            </div>
+            <!-- Prof, Speed, Hit Points -->
+            <div class="col-sm-12 col-md-12 col-lg-6" style="margin-top:-25px">
+                <div class="row pb-2 text-center">
+                    <div id="proficiency" class="col-6 col-sm-4 col-md-4 col-lg-3">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
+                            <li class="list-group-item"><span class="label">Proficiency Bonus</span></li>
+                            <li class="list-group-item" style="margin-top: 10%;"><input class="font-125" type="text" name="speed" maxlength="2" size="2" /></li>
+                        </ul>
+                    </div>
+                    <div id="speed" class="col-6 col-sm-4 col-md-4 col-lg-3">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
+                            <li class="list-group-item"><span class="label">Speed</span></li>
+                            <li class="list-group-item" style="margin-top: 10%;">
+                                <input class="font-125" type="text" name="speed" maxlength="2" size="2" />
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Hit Points -->
+                    <div id="hit-points" class="col-sm-6 col-md-4 col-lg">
+                        <ul class="list-group-flush shadow-sm bg-white rounded h-100">
+                            <li class="list-group-item"><span class="label">Hit Points</span></li>
+                            <li class="list-group-item">
+                                <table class="table table-borderless ">
+                                    <thead>
+                                        <tr>
+                                            <th>Current</th>
+                                            <th>Max</th>
+                                            <th>Temp</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input class="font-125" type="text" name="current-health" maxlength="3" size="3" /></td>
+                                            <td><input class="font-125" type="text" name="max-health" maxlength="3" size="3" /></td>
+                                            <td><input class="font-125" type="text" name="temp-health" maxlength="3" size="3" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Top Row -->
+
         <!-- Left and Center Columns -->
         <div class="row">
-            <!-- Left Col -->
-            <div id="left-col" class="col mx-2">
+            <!-- Lefter Col -->
+            <div id="lefter-col" class="col mx-2">
                 <!-- Saves -->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
                     <div class="col-sm-12 section-header"><span class="label">Saving Throws</span></div>
@@ -186,6 +230,23 @@
                         </table>
                     </div>
                 </div>
+                <!-- Senses-->
+                <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
+                    <div class="col-sm-12 section-header"><span class="label">Senses</span></div>
+                    <div id="saves" class="col-12">
+
+                    </div>
+                </div>
+                <!-- Profenciencies & Languages -->
+                <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
+                    <div class="col-sm-12 section-header"><span class="label">Profenciencies & Languages</span></div>
+                    <div id="saves" class="col-12">
+
+                    </div>
+                </div>
+            </div>
+            <!-- Left Col -->
+            <div id="left-col" class="col mx-2">
                 <!-- Skills -->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
                     <div class="col-sm-12 section-header"><span class="label">Skills</span></div>
@@ -331,7 +392,7 @@
                 </div>
             </div>
             <!-- Center Col -->
-            <div id="center-col" class="col-md-12 col-lg-9 mx-2">
+            <div id="center-col" class="col-md-12 col-lg-7 mx-2">
                 <div class="row my-2 pb-2 bg-white shadow-sm rounded">
                     <nav id="navbar" class="navbar col-12 border border-right-0 border-top-0 border-left-0">
                         <!-- Nav tabs -->

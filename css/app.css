@@ -69,11 +69,15 @@ input:focus {
     text-align: center;
 }
 
+.font-125 {
+    font-size: 1.5rem;
+}
+
 #character-basic-info input {
     margin: 5px;
 }
 
 .table td,
 .table th {
-    padding: .1rem;
+    padding: .4rem;
 }
