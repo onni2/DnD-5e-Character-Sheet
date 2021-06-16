@@ -10,9 +10,9 @@ $(document).ready(function(argument) {
         document.title = loadJson.page1.basic_info.char_name + " - D&D 5e";
 
     //Load Basic Info
-    $('#character-basic-info #basic-info input[name="char-name"]').val(loadJson.page1.basic_info.char_name);
-    $('#character-basic-info #basic-info input[name="level"]').val(loadJson.page1.basic_info.level);
-    $('#character-basic-info #basic-info input[name="level-two"]').val(loadJson.page1.basic_info.level_two);
+    $('input[name="char-name"]').val(loadJson.page1.basic_info.char_name);
+    $('input[name="level"]').val(loadJson.page1.basic_info.level);
+    $('input[name="level-two"]').val(loadJson.page1.basic_info.level_two);
 
     //Load Character Info
     $('#character-basic-info #character-info input[name="race-class"]').val(loadJson.page1.character_info.race_class);
@@ -23,27 +23,27 @@ $(document).ready(function(argument) {
     $('#character-basic-info #character-info input[name="deity"]').val(loadJson.page1.character_info.deity);
 
     //Load Info Bar
-    $('#page-1 #top-bar input[name="proficiency"]').val(loadJson.page1.top_bar.proficiency);
-    $('#page-1 #top-bar input[name="initiative"]').val(loadJson.page1.top_bar.initiative);
-    $('#page-1 #top-bar input[name="passive-perception"]').val(loadJson.page1.top_bar.passive_perception);
-    $('#page-1 #top-bar input[name="ac"]').val(loadJson.page1.top_bar.ac);
-    $('#page-1 #top-bar input[name="speed"]').val(loadJson.page1.top_bar.speed);
-    $('#page-1 #top-bar input[name="spell-dc"]').val(loadJson.page1.top_bar.spell_dc);
-    $('#page-1 #top-bar input[name="insperation"]').val(loadJson.page1.top_bar.insperation);
+    $('input[name="proficiency"]').val(loadJson.page1.top_bar.proficiency);
+    $('input[name="initiative"]').val(loadJson.page1.top_bar.initiative);
+    $('input[name="passive-perception"]').val(loadJson.page1.top_bar.passive_perception);
+    $('input[name="ac"]').val(loadJson.page1.top_bar.ac);
+    $('input[name="speed"]').val(loadJson.page1.top_bar.speed);
+    $('input[name="spell-dc"]').val(loadJson.page1.top_bar.spell_dc);
+    $('input[name="insperation"]').val(loadJson.page1.top_bar.insperation);
 
     //Load Attributes
-    $('#page-1 #attributes input[name="str"]').val(loadJson.page1.attributes.str);
-    $('#page-1 #attributes input[name="str-mod"]').val(loadJson.page1.attributes.str_mod);
-    $('#page-1 #attributes input[name="dex"]').val(loadJson.page1.attributes.dex);
-    $('#page-1 #attributes input[name="dex-mod"]').val(loadJson.page1.attributes.dex_mod);
-    $('#page-1 #attributes input[name="con"]').val(loadJson.page1.attributes.con);
-    $('#page-1 #attributes input[name="con-mod"]').val(loadJson.page1.attributes.con_mod);
-    $('#page-1 #attributes input[name="int"]').val(loadJson.page1.attributes.int);
-    $('#page-1 #attributes input[name="int-mod"]').val(loadJson.page1.attributes.int_mod);
-    $('#page-1 #attributes input[name="wis"]').val(loadJson.page1.attributes.wis);
-    $('#page-1 #attributes input[name="wis-mod"]').val(loadJson.page1.attributes.wis_mod);
-    $('#page-1 #attributes input[name="cha"]').val(loadJson.page1.attributes.cha);
-    $('#page-1 #attributes input[name="cha-mod"]').val(loadJson.page1.attributes.cha_mod);
+    $('input[name="str"]').val(loadJson.page1.attributes.str);
+    $('input[name="str-mod"]').val(loadJson.page1.attributes.str_mod);
+    $('input[name="dex"]').val(loadJson.page1.attributes.dex);
+    $('input[name="dex-mod"]').val(loadJson.page1.attributes.dex_mod);
+    $('input[name="con"]').val(loadJson.page1.attributes.con);
+    $('input[name="con-mod"]').val(loadJson.page1.attributes.con_mod);
+    $('input[name="int"]').val(loadJson.page1.attributes.int);
+    $('input[name="int-mod"]').val(loadJson.page1.attributes.int_mod);
+    $('input[name="wis"]').val(loadJson.page1.attributes.wis);
+    $('input[name="wis-mod"]').val(loadJson.page1.attributes.wis_mod);
+    $('input[name="cha"]').val(loadJson.page1.attributes.cha);
+    $('input[name="cha-mod"]').val(loadJson.page1.attributes.cha_mod);
 
     //Load Skills and Saves	
     $('#page-1 #saves-skills select[name="spell-att"]').val(loadJson.page1.saves_skills.spell_casting);
@@ -51,18 +51,23 @@ $(document).ready(function(argument) {
         $('#saves-skills select[name="spell-att"]').val('none').change();
     }
 
-    $('#page-1 #saves-skills #saves input[name="str-save"]').val(loadJson.page1.saves_skills.saves.str_save.val);
-    $('#page-1 #saves-skills #saves #str-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.str_save.prof);
-    $('#page-1 #saves-skills #saves input[name="dex-save"]').val(loadJson.page1.saves_skills.saves.dex_save.val);
-    $('#page-1 #saves-skills #saves #dex-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.dex_save.prof);
-    $('#page-1 #saves-skills #saves input[name="con-save"]').val(loadJson.page1.saves_skills.saves.con_save.val);
-    $('#page-1 #saves-skills #saves #con-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.con_save.prof);
-    $('#page-1 #saves-skills #saves input[name="int-save"]').val(loadJson.page1.saves_skills.saves.int_save.val);
-    $('#page-1 #saves-skills #saves #int-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.int_save.prof);
-    $('#page-1 #saves-skills #saves input[name="wis-save"]').val(loadJson.page1.saves_skills.saves.wis_save.val);
-    $('#page-1 #saves-skills #saves #wis-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.wis_save.prof);
-    $('#page-1 #saves-skills #saves input[name="cha-save"]').val(loadJson.page1.saves_skills.saves.cha_save.val);
-    $('#page-1 #saves-skills #saves #cha-save input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.cha_save.prof);
+    $('#str-save').text(loadJson.page1.saves_skills.saves.str_save.val);
+    $('#str-save-prof input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.str_save.prof);
+
+    $('#dex-save').text(loadJson.page1.saves_skills.saves.dex_save.val);
+    $('#dex-save-prof input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.dex_save.prof);
+
+    $('#con-save').text(loadJson.page1.saves_skills.saves.con_save.val);
+    $('#con-save-prof input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.con_save.prof);
+
+    $('#int-save').text(loadJson.page1.saves_skills.saves.int_save.val);
+    $('#int-save-prof input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.int_save.prof);
+
+    $('#wis-save').text(loadJson.page1.saves_skills.saves.wis_save.val);
+    $('#wis-save-prof input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.wis_save.prof);
+
+    $('#cha-save').text(loadJson.page1.saves_skills.saves.cha_save.val);
+    $('#cha-save-prof input[name="prof"]').prop("checked", loadJson.page1.saves_skills.saves.cha_save.prof);
 
     $('#page-1 #saves-skills #skills input[name="acrobatics-skill"]').val(loadJson.page1.saves_skills.skills.acrobatics.val);
     $('#page-1 #saves-skills #skills #acrobatics-skill input[name="prof"]').prop("checked", loadJson.page1.saves_skills.skills.acrobatics.prof);
@@ -147,9 +152,9 @@ $(document).ready(function(argument) {
     $('#page-1 #status #death-saves input[name="failure-3"]').prop("checked", loadJson.page1.status.death_saves.failure.three);
     $('#page-1 #status #hit-dice input[name="hit-dice"]').val(loadJson.page1.status.hit_dice.type);
     $('#page-1 #status #hit-dice input[name="current-hd"]').val(loadJson.page1.status.hit_dice.current_hd);
-    $('#page-1 #status #hit-points input[name="temp-health"]').val(loadJson.page1.status.temp_health);
-    $('#page-1 #status #hit-points input[name="current-health"]').val(loadJson.page1.status.current_health);
-    $('#page-1 #status #hit-points input[name="max-health"]').val(loadJson.page1.status.max_health);
+    $('input[name="temp-health"]').val(loadJson.page1.status.temp_health);
+    $('input[name="current-health"]').val(loadJson.page1.status.current_health);
+    $('input[name="max-health"]').val(loadJson.page1.status.max_health);
 
     //Load Proficiencies
     $('#page-1 #proficiencies #weapons-armor textarea[name="weapons-armor"]').val(loadJson.page1.proficiencies.weapon_armor);
