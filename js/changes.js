@@ -87,59 +87,65 @@ function updateSaves() {
 
     var prof = parseInt($('input[name="proficiency"]').val()) || 0;
 
+    // strength
     if ($('#str-save-prof').prop("checked") == true) {
         var strProf = prof;
     } else {
         var strProf = 0;
     }
-    var base = parseInt($('#attributes input[name="str-mod"]').val()) || 0;
+    var base = parseInt($('input[name="str-mod"]').val()) || 0;
     var save = ((base + strProf) < 0 ? "" : "+") + (base + strProf);
-    $('#saves input[name="str-save"]').val(save);
+    $('#str-save').text(save);
 
-    if ($('#saves #dex-save input[name="prof"]').prop("checked") == true) {
+    // dexterity
+    if ($('#dex-save-prof').prop("checked") == true) {
         var dexProf = prof;
     } else {
         var dexProf = 0;
     }
-    var base = parseInt($('#attributes input[name="dex-mod"]').val()) || 0;
+    var base = parseInt($('input[name="dex-mod"]').val()) || 0;
     var save = ((base + dexProf) < 0 ? "" : "+") + (base + dexProf);
-    $('#saves input[name="dex-save"]').val(save);
+    $('#dex-save').text(save);
 
-    if ($('#saves #con-save input[name="prof"]').prop("checked") == true) {
+    // constitution
+    if ($('#con-save-prof').prop("checked") == true) {
         var conProf = prof;
     } else {
         var conProf = 0;
     }
-    var base = parseInt($('#attributes input[name="con-mod"]').val()) || 0;
+    var base = parseInt($('input[name="con-mod"]').val()) || 0;
     var save = ((base + conProf) < 0 ? "" : "+") + (base + conProf);
-    $('#saves input[name="con-save"]').val(save);
+    $('#con-save').text(save);
 
-    if ($('#saves #int-save input[name="prof"]').prop("checked") == true) {
+    // inteligence
+    if ($('#int-save-prof').prop("checked") == true) {
         var intProf = prof;
     } else {
         var intProf = 0;
     }
-    var base = parseInt($('#attributes input[name="int-mod"]').val()) || 0;
+    var base = parseInt($('input[name="int-mod"]').val()) || 0;
     var save = ((base + intProf) < 0 ? "" : "+") + (base + intProf);
-    $('#saves input[name="int-save"]').val(save);
+    $('#int-save').text(save);
 
-    if ($('#saves #wis-save input[name="prof"]').prop("checked") == true) {
+    // wisdom
+    if ($('#wis-save-prof').prop("checked") == true) {
         var wisProf = prof;
     } else {
         var wisProf = 0;
     }
-    var base = parseInt($('#attributes input[name="wis-mod"]').val()) || 0;
+    var base = parseInt($('input[name="wis-mod"]').val()) || 0;
     var save = ((base + wisProf) < 0 ? "" : "+") + (base + wisProf);
-    $('#saves input[name="wis-save"]').val(save);
+    $('#wis-save').text(save);
 
-    if ($('#saves #cha-save input[name="prof"]').prop("checked") == true) {
+    // charisma
+    if ($('#cha-save-prof').prop("checked") == true) {
         var chaProf = prof;
     } else {
         var chaProf = 0;
     }
-    var base = parseInt($('#attributes input[name="cha-mod"]').val()) || 0;
+    var base = parseInt($('input[name="cha-mod"]').val()) || 0;
     var save = ((base + chaProf) < 0 ? "" : "+") + (base + chaProf);
-    $('#saves input[name="cha-save"]').val(save);
+    $('#cha-save').text(save);
 }
 
 function updateSpells() {
@@ -460,10 +466,10 @@ function updateStrMisc() {
     var base = parseInt($('#attributes input[name="str-mod"]').val()) || 0;
     var score = parseInt($('#attributes input[name="str"]').val()) || 0;
 
-    $('#encumberance input[name="base-encumberance"]').val(score * 5);
-    $('#encumberance input[name="encumbered-encumberance"]').val(score * 10);
-    $('#encumberance input[name="h-encumbered-encumberance"]').val(score * 15);
-    $('#encumberance input[name="push-encumberance"]').val(score * 30);
+    $('input[name="base-encumberance"]').val(score * 5);
+    $('input[name="encumbered-encumberance"]').val(score * 10);
+    $('input[name="h-encumbered-encumberance"]').val(score * 15);
+    $('input[name="push-encumberance"]').val(score * 30);
 
 }
 
@@ -483,14 +489,39 @@ function updateWisMisc() {
     } else {
         var skillProf = 0;
     }
-
     if ($('#perception-skill-expr').prop("checked") == true) {
         var skillProf = prof * 2;
     }
-
     var skill = ((base + skillProf) < 0 ? "" : "+") + (base + skillProf);
-
     $('input[name="passive-perception"]').val(10 + parseInt(skill));
+
+    if ($('#insight-skill-prof').prop("checked") == true) {
+        var skillProf = prof;
+    } else {
+        var skillProf = 0;
+    }
+    if ($('#insight-skill-expr').prop("checked") == true) {
+        var skillProf = prof * 2;
+    }
+    var skill = ((base + skillProf) < 0 ? "" : "+") + (base + skillProf);
+    $('input[name="passive-insight"]').val(10 + parseInt(skill));
+
+}
+function updateIntMisc() {
+    var prof = parseInt($('input[name="proficiency"]').val()) || 0;
+    var base = parseInt($('input[name="int-mod"]').val()) || 0;
+    var score = parseInt($('input[name="int"]').val()) || 0;
+
+    if ($('#investigation-skill-prof').prop("checked") == true) {
+        var skillProf = prof;
+    } else {
+        var skillProf = 0;
+    }
+    if ($('#investigation-skill-expr').prop("checked") == true) {
+        var skillProf = prof * 2;
+    }
+    var skill = ((base + skillProf) < 0 ? "" : "+") + (base + skillProf);
+    $('input[name="passive-investigation"]').val(10 + parseInt(skill));
 }
 
 function calculateTotalWeight(argument) {
@@ -688,6 +719,7 @@ $('document').ready(function(argument) {
 
         updateMod('int', $('input[name="int"]').val());
         updateIntSkills();
+        updateIntMisc();
     });
 
     //Run when wisdom changes
@@ -718,7 +750,7 @@ $('document').ready(function(argument) {
         updateSpells();
     });
 
-    //Run when proficience changes
+    //Run when proficiency changes
     $('input[name="proficiency"]').on('input', function(argument) {
         if (LOCKED)
             return;
@@ -728,6 +760,7 @@ $('document').ready(function(argument) {
         updateDexSkills();
         updateDexMisc();
         updateIntSkills();
+        updateIntMisc();
         updateWisSkills();
         updateWisMisc();
         updateChaSkills();
@@ -756,6 +789,7 @@ $('document').ready(function(argument) {
             updateDexSkills();
             updateDexMisc();
             updateIntSkills();
+            updateIntMisc();
             updateWisSkills();
             updateWisMisc();
             updateChaSkills();
@@ -772,6 +806,7 @@ $('document').ready(function(argument) {
             updateDexSkills();
             updateDexMisc();
             updateIntSkills();
+            updateIntMisc();
             updateWisSkills();
             updateWisMisc();
             updateChaSkills();
@@ -779,7 +814,7 @@ $('document').ready(function(argument) {
     });
 
     //Run misc changes
-    $('#saves-skills select[name="spell-att"]').change(function(argument) {
+    $('select[name="spell-att"]').change(function(argument) {
         if (LOCKED)
             return;
 

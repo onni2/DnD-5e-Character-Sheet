@@ -198,28 +198,28 @@
                                 <td><span id="str-save">+0</span></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input id="dex-save-prof" type="checkbox" name="prof" /></td>
                                 <td>Dexterity</td>
                                 <td><span id="dex-save">+0</span></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input id="con-save-prof" type="checkbox" name="prof" /></td>
                                 <td>Constitution</td>
                                 <td><span id="con-save">+0</span></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input id="int-save-prof" type="checkbox" name="prof" /></td>
                                 <td>Intelligence</td>
                                 <td><span id="int-save">+0</span></td>
                             </tr>
                             <tr>
-                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input id="wis-save-prof" type="checkbox" name="prof" /></td>
                                 <td>Wisdom</td>
                                 <td><span id="wis-save">+0</span></td>
                             </tr>
 
                             <tr>
-                                <td><input type="checkbox" name="prof" /></td>
+                                <td><input id="cha-save-prof" type="checkbox" name="prof" /></td>
                                 <td>Charisma</td>
                                 <td><span id="cha-save">+0</span></td>
                             </tr>
@@ -264,311 +264,222 @@
                     </div>
                 </div>
             </div>
-            <!-- Left Col -->
-            <div id="left-col" class="col mx-2">
-                <!-- Skills -->
-                <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
-                    <div class="col-sm-12 section-header"><span class="label">Skills</span></div>
-                    <div id="skills" class="col-12">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Prof</th>
-                                    <th>Expr</th>
-                                    <th>MOD</th>
-                                    <th>Name</th>
-                                    <th>Bonus</th>
-                                </tr>
-                            </thead>
-                            <tr>
-                                <td><input id="acrobatics-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="acrobatics-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>DEX</td>
-                                <td>Acrobatics</td>
-                                <td><span id="acrobatics-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="animal-handling-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="animal-handling-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>WIS</td>
-                                <td>Animal Handling</td>
-                                <td><span id="animal-handling-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="arcana-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="arcana-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>INT</td>
-                                <td>Arcana</td>
-                                <td><span id="arcana-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="athletics-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="athletics-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>STR</td>
-                                <td>Athletics</td>
-                                <td><span id="athletics-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="deception-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="deception-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>CHA</td>
-                                <td>Deception</td>
-                                <td><span id="deception-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="history-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="history-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>INT</td>
-                                <td>History</td>
-                                <td><span id="history-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="insight-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="insight-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>WIS</td>
-                                <td>Insight</td>
-                                <td><span id="insight-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="intimidation-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="intimidation-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>CHA</td>
-                                <td>Intimidation</td>
-                                <td><span id="intimidation-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="investigation-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="investigation-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>INT</td>
-                                <td>Investigation</td>
-                                <td><span id="investigation-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="medicine-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="medicine-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>WIS</td>
-                                <td>Medicine</td>
-                                <td><span id="medicine-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="nature-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="nature-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>INT</td>
-                                <td>Nature</td>
-                                <td><span id="nature-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="perception-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="perception-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>WIS</td>
-                                <td>Perception</td>
-                                <td><span id="perception-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="performance-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="performance-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>CHA</td>
-                                <td>Performance</td>
-                                <td><span id="performance-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="persuasion-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="persuasion-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>CHA</td>
-                                <td>Persuasion</td>
-                                <td><span id="persuasion-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="religion-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="religion-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>INT</td>
-                                <td>Religion</td>
-                                <td><span id="religion-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="sleight-hand-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="sleight-hand-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>DEX</td>
-                                <td>Sleight of Hand</td>
-                                <td><span id="sleight-hand-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="stealth-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="stealth-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>DEX</td>
-                                <td>Stealth</td>
-                                <td><span id="stealth-skill">+0</span></td>
-                            </tr>
-                            <tr>
-                                <td><input id="survival-skill-prof" type="checkbox" name="prof" /></td>
-                                <td><input id="survival-skill-expr" type="checkbox" name="expr" /></td>
-                                <td>WIS</td>
-                                <td>Survival</td>
-                                <td><span id="survival-skill">+0</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
+
             <!-- Center Col -->
             <div id="center-col" class="col-md-12 col-lg-7 mx-2">
                 <div class="row my-2 pb-2 bg-white shadow-sm rounded">
-                    <nav id="navbar" class="navbar col-12 border border-right-0 border-top-0 border-left-0">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="#menu0">Combat</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu1">Actions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu2">Spells</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu3">Equipment</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="col-12 my-2 pb-2 text-center">
-                        <!-- Status & Life -->
-                        <div class="row">
-                            <div class="col-sm-12 section-header"><span class="label">General Stats</span></div>
-                            <div id="hit-points" class="col-sm-6 col-md-4 col-lg-4">
-                                <div id="temp-health" class="w3-col w3-padding">
-                                    <input type="text" name="temp-health" />
-                                    <br/>
-                                    <span class="label w3-padding">Temporary Health</span>
+                    <!-- Nav pills -->
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="pill" href="#menu0">Combat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu1">Actions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu2">Spells</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu3">Equipment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu4">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu5">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu6">Backstory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu7">Notes</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content col-12">
+                        <div id="menu0" class="container tab-pane active"><br>
+                            <h3>Menu 0</h3>
+                        </div>
+                        <div id="menu1" class="container tab-pane fade"><br>
+                            <h3>Menu 1</h3>
+                        </div>
+                        <div id="menu2" class="container tab-pane fade"><br>
+                            <h3>Menu 2</h3>
+                        </div>
+                        <div id="menu3" class="container tab-pane fade"><br>
+                            <h3>Menu 3</h3>
+                        </div>
+                        <!-- Skills -->
+                        <div id="menu4" class="container tab-pane fade"><br>
+                            <h3>Skills</h3>
+                            <div id="skills-pane" class="row">
+                                <div id="skills" class="col-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Prof</th>
+                                                <th>Expr</th>
+                                                <th>MOD</th>
+                                                <th>Name</th>
+                                                <th>Bonus</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td><input id="acrobatics-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="acrobatics-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>DEX</td>
+                                            <td>Acrobatics</td>
+                                            <td><span id="acrobatics-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="animal-handling-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="animal-handling-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>WIS</td>
+                                            <td>Animal Handling</td>
+                                            <td><span id="animal-handling-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="arcana-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="arcana-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>INT</td>
+                                            <td>Arcana</td>
+                                            <td><span id="arcana-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="athletics-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="athletics-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>STR</td>
+                                            <td>Athletics</td>
+                                            <td><span id="athletics-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="deception-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="deception-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>CHA</td>
+                                            <td>Deception</td>
+                                            <td><span id="deception-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="history-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="history-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>INT</td>
+                                            <td>History</td>
+                                            <td><span id="history-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="insight-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="insight-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>WIS</td>
+                                            <td>Insight</td>
+                                            <td><span id="insight-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="intimidation-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="intimidation-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>CHA</td>
+                                            <td>Intimidation</td>
+                                            <td><span id="intimidation-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="investigation-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="investigation-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>INT</td>
+                                            <td>Investigation</td>
+                                            <td><span id="investigation-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="medicine-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="medicine-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>WIS</td>
+                                            <td>Medicine</td>
+                                            <td><span id="medicine-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="nature-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="nature-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>INT</td>
+                                            <td>Nature</td>
+                                            <td><span id="nature-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="perception-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="perception-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>WIS</td>
+                                            <td>Perception</td>
+                                            <td><span id="perception-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="performance-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="performance-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>CHA</td>
+                                            <td>Performance</td>
+                                            <td><span id="performance-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="persuasion-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="persuasion-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>CHA</td>
+                                            <td>Persuasion</td>
+                                            <td><span id="persuasion-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="religion-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="religion-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>INT</td>
+                                            <td>Religion</td>
+                                            <td><span id="religion-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="sleight-hand-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="sleight-hand-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>DEX</td>
+                                            <td>Sleight of Hand</td>
+                                            <td><span id="sleight-hand-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="stealth-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="stealth-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>DEX</td>
+                                            <td>Stealth</td>
+                                            <td><span id="stealth-skill">+0</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="survival-skill-prof" type="checkbox" name="prof" /></td>
+                                            <td><input id="survival-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td>WIS</td>
+                                            <td>Survival</td>
+                                            <td><span id="survival-skill">+0</span></td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                <div id="current-health" class="w3-col s6 m6 l6">
-                                    <input type="text" name="current-health" />
-                                    <br/>
-                                    <span class="label">Current Health</span>
-                                </div>
-                                <div id="max-health" class="w3-col s6 m6 l6">
-                                    <input type="text" name="max-health" />
-                                    <br/>
-                                    <span class="label">Maximum Health</span>
-                                </div>
-                            </div>
-                            <div id="hit-dice" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Hit Dice</span>
-                                <div>
-                                    <ul class="list-group-flush">
-                                        <li class="list-group-item"><span class="sub-label">Current</span><input class="label" type="text" name="current-hd" maxlength="2" size="2" /></li>
-                                        <li class="list-group-item"><input type="text" name="hit-dice" maxlength="4" size="4" /></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="death-saves" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Death Saves</span>
-                                <div id="successes">
-                                    <span class="sub-label">Success</span>
-                                    <div id="success-num">
-                                        <input class="w3-check" type="checkbox" name="success-1" />
-                                        <input class="w3-check" type="checkbox" name="success-2" />
-                                        <input class="w3-check" type="checkbox" name="success-3" />
-                                    </div>
-                                </div>
-                                <div id="failures" class="">
-                                    <span class="sub-label">Failure</span>
-                                    <div id="failure-num">
-                                        <input class="w3-check" type="checkbox" name="failure-1" />
-                                        <input class="w3-check" type="checkbox" name="failure-2" />
-                                        <input class="w3-check" type="checkbox" name="failure-3" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="conditions" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Conditions</span>
-                                <textarea name="conditions" rows="5"></textarea>
-                            </div>
-                            <div id="boons" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Boons</span>
-                                <textarea name="boons" rows="5"></textarea>
                             </div>
                         </div>
-
-                    </div>
-                </div>
-                <div class="row my-2 pb-2 bg-white shadow-sm rounded">
-                    <nav id="navbar" class="navbar col-12 border border-right-0 border-top-0 border-left-0">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="pill" href="#menu4">Features & Traits</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu5">Backstory</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#menu6">Notes</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="col-12 my-2 pb-2 text-center">
-                        <!-- Status & Life -->
-                        <div class="row">
-                            <div class="col-sm-12 section-header"><span class="label">General Stats</span></div>
-                            <div id="hit-points" class="col-sm-6 col-md-4 col-lg-4">
-                                <div id="temp-health" class="w3-col w3-padding">
-                                    <input type="text" name="temp-health" />
-                                    <br/>
-                                    <span class="label w3-padding">Temporary Health</span>
+                        <!-- -->
+                        <div id="menu5" class="container tab-pane fade"><br>
+                            <h3>Menu 5</h3>
+                        </div>
+                        <!-- -->
+                        <div id="menu6" class="container tab-pane fade"><br>
+                            <h3>Menu 6</h3>
+                        </div>
+                        <!-- Notes -->
+                        <div id="menu7" class="container tab-pane fade"><br>
+                            <h3>Notes</h3>
+                            <div id="notes" class="row">
+                                <div id="notes-1" class="col-12 col-md-6 col-lg-6">
+                                    <textarea name="notes-1" rows="5" style="width: 100%;"></textarea>
                                 </div>
-                                <div id="current-health" class="w3-col s6 m6 l6">
-                                    <input type="text" name="current-health" />
-                                    <br/>
-                                    <span class="label">Current Health</span>
+                                <div id="notes-2" class="col-12 col-md-6 col-lg-6">
+                                    <textarea name="notes-2" rows="5" style="width: 100%;"></textarea>
                                 </div>
-                                <div id="max-health" class="w3-col s6 m6 l6">
-                                    <input type="text" name="max-health" />
-                                    <br/>
-                                    <span class="label">Maximum Health</span>
-                                </div>
-                            </div>
-                            <div id="hit-dice" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Hit Dice</span>
-                                <div>
-                                    <ul class="list-group-flush">
-                                        <li class="list-group-item"><span class="sub-label">Current</span><input class="label" type="text" name="current-hd" maxlength="2" size="2" /></li>
-                                        <li class="list-group-item"><input type="text" name="hit-dice" maxlength="4" size="4" /></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="death-saves" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Death Saves</span>
-                                <div id="successes">
-                                    <span class="sub-label">Success</span>
-                                    <div id="success-num">
-                                        <input class="w3-check" type="checkbox" name="success-1" />
-                                        <input class="w3-check" type="checkbox" name="success-2" />
-                                        <input class="w3-check" type="checkbox" name="success-3" />
-                                    </div>
-                                </div>
-                                <div id="failures" class="">
-                                    <span class="sub-label">Failure</span>
-                                    <div id="failure-num">
-                                        <input class="w3-check" type="checkbox" name="failure-1" />
-                                        <input class="w3-check" type="checkbox" name="failure-2" />
-                                        <input class="w3-check" type="checkbox" name="failure-3" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="conditions" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Conditions</span>
-                                <textarea name="conditions" rows="5"></textarea>
-                            </div>
-                            <div id="boons" class="col-sm-6 col-md-4 col-lg-2">
-                                <span class="label">Boons</span>
-                                <textarea name="boons" rows="5"></textarea>
                             </div>
                         </div>
-
                     </div>
                 </div>
+
             </div>
-            <!-- Lefter, Left, and Center Columns -->
+
         </div>
     </div>
     <!-- Main Container -->
