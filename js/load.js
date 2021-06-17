@@ -200,7 +200,7 @@ $(document).ready(function(argument) {
     });
 
     //Load Feats and Traits
-    $('#page-1 #features textarea[name="features"]').val(loadJson.page1.features);
+    $('textarea[name="features"]').val(loadJson.page1.features);
 
     //Load Equipment
     $.each(loadJson.page2.equipment.val.col_1, function(index, value) {
@@ -247,21 +247,21 @@ $(document).ready(function(argument) {
     $('#page-2 #mount-pet textarea[name="mount-notes-2"]').val(loadJson.page2.mount_pet2.notes2);
 
     //Load Backstory
-    $('#page-4 #backstory textarea[name="backstory"]').val(loadJson.page4.backstory);
+    $('textarea[name="backstory"]').val(loadJson.page4.backstory);
 
     //Load allies/organizations
-    $('#page-4 #allies-organizations input[name="name"]').val(loadJson.page4.allies_organizations.name);
-    $('#page-4 #allies-organizations textarea[name="allies-organizations"]').val(loadJson.page4.allies_organizations.val);
+    $('input[name="name"]').val(loadJson.page4.allies_organizations.name);
+    $('textarea[name="allies-organizations"]').val(loadJson.page4.allies_organizations.val);
 
     //Load Personality
-    $('#personality #personality-traits textarea[name="personality-traits"]').val(loadJson.page4.personality.personality_traits);
-    $('#personality #ideals textarea[name="ideals"]').val(loadJson.page4.personality.ideals);
-    $('#personality #bonds textarea[name="bonds"]').val(loadJson.page4.personality.bonds);
-    $('#personality #flaws textarea[name="flaws"]').val(loadJson.page4.personality.flaws);
+    $('textarea[name="personality-traits"]').val(loadJson.page4.personality.personality_traits);
+    $('textarea[name="ideals"]').val(loadJson.page4.personality.ideals);
+    $('textarea[name="bonds"]').val(loadJson.page4.personality.bonds);
+    $('textarea[name="flaws"]').val(loadJson.page4.personality.flaws);
 
     //Load Notes
-    $('#page-5 #notes-1 textarea[name="notes-1"]').val(loadJson.page5.notes_1);
-    $('#page-5 #notes-2 textarea[name="notes-2"]').val(loadJson.page5.notes_2);
+    $('textarea[name="notes-1"]').val(loadJson.page5.notes_1);
+    $('textarea[name="notes-2"]').val(loadJson.page5.notes_2);
 
     //Load Spell Info
     $('#page-3 #spell-info input[name="class"]').val(loadJson.page3.spell_info.class);

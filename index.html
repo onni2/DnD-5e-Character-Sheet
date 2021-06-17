@@ -146,11 +146,11 @@
         <!-- Left and Center Columns -->
         <div class="row">
             <!-- Left Col -->
-            <div id="left-col" class="col mx-2">
+            <div id="left-col" class="col col-lg-4 mx-2">
                 <!-- Saves -->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
-                    <div class="col-sm-12 section-header"><span class="label">Saving Throws</span></div>
-                    <div id="saves" class="col-12">
+                    <div class="col-sm-12 section-header" data-toggle="collapse" data-target="#saves"><span class="label">Saving Throws</span></div>
+                    <div id="saves" class="col-12 collapse show">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -195,8 +195,8 @@
                 </div>
                 <!-- Senses-->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
-                    <div class="col-sm-12 section-header"><span class="label">Senses</span></div>
-                    <div id="senses" class="col-12">
+                    <div class="col-sm-12 section-header" data-toggle="collapse" data-target="#senses"><span class="label">Senses</span></div>
+                    <div id="senses" class="col-12 collapse show">
                         <table class="table table-striped">
                             <tbody>
                                 <tr>
@@ -212,7 +212,7 @@
                                     <td>Passive WIS (Insight)</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><textarea name="senses" rows="4" style="width: 100%;"></textarea></td>
+                                    <td colspan="2"><textarea class="form-control" name="senses" rows="4" style="width: 100%;"></textarea></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -220,20 +220,20 @@
                 </div>
                 <!-- Profenciencies & Languages -->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
-                    <div class="col-sm-12 section-header"><span class="label">Profenciencies & Languages</span></div>
-                    <div id="prof-lang" class="col-12">
+                    <div class="col-sm-12 section-header" data-toggle="collapse" data-target="#prof-lang"><span class="label">Profenciencies & Languages</span></div>
+                    <div id="prof-lang" class="col-12 collapse show">
                         <ul class="list-group list-group-flush" style="border-top: 1px solid #dee2e6;">
-                            <li class="list-group-item" style="border: 0;">ARMOR<textarea name="prof-armor" style="width: 100%;"></textarea></li>
-                            <li class="list-group-item">WEAPONS<textarea name="prof-weapons" style="width: 100%;"></textarea></li>
-                            <li class="list-group-item">TOOLS<textarea name="prof-tools" style="width: 100%;"></textarea></li>
-                            <li class="list-group-item">LANGUAGES<textarea name="prof-languages" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item" style="border: 0;">ARMOR<textarea class="form-control" name="prof-armor" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item">WEAPONS<textarea class="form-control" name="prof-weapons" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item">TOOLS<textarea class="form-control" name="prof-tools" style="width: 100%;"></textarea></li>
+                            <li class="list-group-item">LANGUAGES<textarea class="form-control" name="prof-languages" style="width: 100%;"></textarea></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Center Col -->
-            <div id="center-col" class="col-md-12 col-lg-7 mx-2">
+            <div id="center-col" class="col col-sm-12 col-md-12 col-lg mx-2">
                 <div class="row my-2 pb-2 bg-white shadow-sm rounded">
                     <!-- Nav pills -->
                     <ul class="nav nav-pills" role="tablist">
@@ -333,7 +333,7 @@
                             <h3>Skills</h3>
                             <div id="skills-pane" class="row">
                                 <div id="skills" class="col-12">
-                                    <table class="table table-striped">
+                                    <table class="table table-striped text-center">
                                         <thead>
                                             <tr>
                                                 <th>Prof</th>
@@ -473,13 +473,80 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- -->
+                        <!-- Features & Traits -->
                         <div id="menu5" class="container tab-pane fade"><br>
-                            <h3>Menu 5</h3>
+                            <h3>Features & Traits</h3>
+                            <div id="features-traits" class="row">
+                                <div class="col-12">
+                                    <label for="features">Racial Traits</label>
+                                    <textarea class="form-control" name="features" rows="5"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label for="class">Class Features</label>
+                                    <textarea class="form-control" name="class" rows="5"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <label for="feats">Feats</label>
+                                    <textarea class="form-control" name="feats" rows="5"></textarea>
+                                </div>
+                            </div>
                         </div>
-                        <!-- -->
+                        <!-- Backstory -->
                         <div id="menu6" class="container tab-pane fade"><br>
-                            <h3>Menu 6</h3>
+                            <h3>Backstory</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div id="apperance" class="col">
+                                            <span class="label">Character Apperance</span>
+                                            <div id="char-img" class="border border-secondary rounded" style="min-width:250px;width: 100%;height: 350px;"></div>
+                                            <button type="button" class="btn btn-link">Change Image</button>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <span class="label">Personality Traits</span>
+                                                    <textarea class="form-control" name="personality-traits" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <span class="label">Ideals</span>
+                                                    <textarea class="form-control" name="ideals" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <span class="label">Bonds</span>
+                                                    <textarea class="form-control" name="bonds" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                                                    <span class="label">Flaws</span>
+                                                    <textarea class="form-control" name="flaws" rows="3"></textarea>
+                                                </div>
+                                                <div id="backstory" class="col col-12" style="min-width: 200px;">
+                                                    <span class="label">Character Backstory</span>
+                                                    <textarea class="form-control" name="backstory" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-2">
+                                    <div class="row">
+                                        <div id="name" class="col">
+                                            <span class="label">Organization or Guild</span>
+                                            <input type="text" name="name" />
+                                        </div>
+                                        <div id="symbol" class="col">
+                                            <span class="label">Guild/Org Symbol</span>
+                                            <div id="alli-img" class="border border-secondary rounded" style="min-width:150px;width: 100%;height: 150px;"></div>
+                                            <button type="button" class="btn btn-link">Change Image</button>
+                                        </div>
+                                        <div class="col-12 col-lg">
+                                            <span class="label">Allies and Organizations</span>
+                                            <textarea class="form-control" name="allies-organizations" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- -->
                         <div id="menu7" class="container tab-pane fade"><br>
@@ -490,10 +557,10 @@
                             <h3>Notes</h3>
                             <div id="notes" class="row">
                                 <div id="notes-1" class="col-12 col-md-6 col-lg-6">
-                                    <textarea name="notes-1" rows="5" style="width: 100%;"></textarea>
+                                    <textarea class="form-control" name="notes-1" rows="5" style="width: 100%;"></textarea>
                                 </div>
                                 <div id="notes-2" class="col-12 col-md-6 col-lg-6">
-                                    <textarea name="notes-2" rows="5" style="width: 100%;"></textarea>
+                                    <textarea class="form-control" name="notes-2" rows="5" style="width: 100%;"></textarea>
                                 </div>
                             </div>
                         </div>
