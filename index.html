@@ -21,40 +21,7 @@
     <script type="text/javascript" src="js/load.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </head>
-<!-- Basic Info -->
-<!-- Need to put somwhere... 
-<div id="character-basic-info" class="row my-2 pb-2 text-left">
-    <div class="col-sm-12 section-header"><span class="label">Character Info</span></div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="char-name" /> Character Name
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="level" /> Class/Level
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="level-two"> Class/Level
-    </div>
 
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="race-class" /> Race
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="background" /> Background
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="player-name" /> Player Name
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="exp" /> Experience
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="alignment" /> Alignment
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-        <input type="text" name="deity"> Deity
-    </div>
-</div>
--->
 
 <body>
     <!-- Navbar -->
@@ -78,7 +45,7 @@
         </div>
     </nav>
     <!-- Nav Extension -->
-    <div class="bg-dark navbar-dark" style="height: 125px;display: flex;position: static;">
+    <div class="bg-dark navbar-dark" style="height: 75px;display: flex;position: static;">
 
     </div>
     <!-- Main Container -->
@@ -176,10 +143,10 @@
         </div>
         <!-- Top Row -->
 
-        <!-- Lefter, Left, and Center Columns -->
+        <!-- Left and Center Columns -->
         <div class="row">
-            <!-- Lefter Col -->
-            <div id="lefter-col" class="col mx-2">
+            <!-- Left Col -->
+            <div id="left-col" class="col mx-2">
                 <!-- Saves -->
                 <div class="row my-2 pb-2 shadow-sm bg-white rounded text-left">
                     <div class="col-sm-12 section-header"><span class="label">Saving Throws</span></div>
@@ -271,13 +238,13 @@
                     <!-- Nav pills -->
                     <ul class="nav nav-pills" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#menu0">Combat</a>
+                            <a class="nav-link active" data-toggle="pill" href="#menu0">Basic Info</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="pill" href="#menu1">Actions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#menu2">Spells</a>
+                            <a class="nav-link" data-toggle="pill" href="#menu2">Combat</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="pill" href="#menu3">Equipment</a>
@@ -292,21 +259,72 @@
                             <a class="nav-link" data-toggle="pill" href="#menu6">Backstory</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#menu7">Notes</a>
+                            <a class="nav-link" data-toggle="pill" href="#menu7">Spells</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#menu8">Notes</a>
                         </li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content col-12">
+                        <!-- Basic Info -->
                         <div id="menu0" class="container tab-pane active"><br>
-                            <h3>Menu 0</h3>
+                            <h3>Basic Info</h3>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Character Name</th>
+                                        <th>Class/Level</th>
+                                        <th>Class 2/Level</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="char-name" /></td>
+                                        <td><input type="text" name="level" /></td>
+                                        <td><input type="text" name="level-two"></td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th>Race</th>
+                                        <th>Background</th>
+                                        <th>Alignment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="race-class" /></td>
+                                        <td><input type="text" name="background" /></td>
+                                        <td><input type="text" name="alignment" /></td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <th>Player Name</th>
+                                        <th>Experience</th>
+                                        <th>Diety</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" name="player-name" /></td>
+                                        <td><input type="text" name="exp" /></td>
+                                        <td><input type="text" name="deity"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
+                        <!-- -->
                         <div id="menu1" class="container tab-pane fade"><br>
                             <h3>Menu 1</h3>
                         </div>
+                        <!-- -->
                         <div id="menu2" class="container tab-pane fade"><br>
                             <h3>Menu 2</h3>
                         </div>
+                        <!-- -->
                         <div id="menu3" class="container tab-pane fade"><br>
                             <h3>Menu 3</h3>
                         </div>
@@ -463,8 +481,12 @@
                         <div id="menu6" class="container tab-pane fade"><br>
                             <h3>Menu 6</h3>
                         </div>
-                        <!-- Notes -->
+                        <!-- -->
                         <div id="menu7" class="container tab-pane fade"><br>
+                            <h3>Menu 7</h3>
+                        </div>
+                        <!-- Notes -->
+                        <div id="menu8" class="container tab-pane fade"><br>
                             <h3>Notes</h3>
                             <div id="notes" class="row">
                                 <div id="notes-1" class="col-12 col-md-6 col-lg-6">
