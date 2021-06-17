@@ -322,18 +322,179 @@
                         </div>
                         <!-- -->
                         <div id="menu2" class="container tab-pane fade"><br>
-                            <h3>Menu 2</h3>
+                            <h3>Combat</h3>
+                            <div class="row mb-2 text-center">
+                                <!-- Initiative -->
+                                <div class="col mb-2">
+                                    <ul class="list-group list-group-flush shadow-sm bg-white rounded h-100">
+                                        <li class="list-group-item"><span class="label">Initiative</span></li>
+                                        <li class="list-group-item"><input class="font-125" type="text" name="initiative" maxlength="2" size="2" /></li>
+                                    </ul>
+                                </div>
+                                <!-- Armor Class -->
+                                <div class="col mb-2">
+                                    <ul class="list-group list-group-flush shadow-sm bg-white rounded h-100">
+                                        <li class="list-group-item"><span class="label">Armor Class</span></li>
+                                        <li class="list-group-item"><input class="font-125" type="text" name="ac" maxlength="2" size="2" /></li>
+                                    </ul>
+                                </div>
+                                <!-- Spell Save DC -->
+                                <div class="col mb-2">
+                                    <ul class="list-group list-group-flush shadow-sm bg-white rounded h-100">
+                                        <li class="list-group-item"><span class="label">Spell Save DC</span></li>
+                                        <li class="list-group-item"><input class="font-125" class="auto-filled-border" type="text" name="spell-dc" maxlength="2" size="2" /></li>
+                                        <li class="list-group-item">
+                                            <select class="form-control" name="spell-att">
+                                                <option value="none">No Spell Casting</option>
+                                                <option value="str">Strength</option>
+                                                <option value="dex">Dexterity</option>
+                                                <option value="con">Constitution</option>
+                                                <option value="int">Intelligence</option>
+                                                <option value="wis">Wisdom</option>
+                                                <option value="cha">Charisma</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Inspiration -->
+                                <!--<div class="col">
+                                    <ul class="list-group list-group-flush shadow-sm bg-white rounded h-100">
+                                        <li class="list-group-item"><span class="label">Insperation</span></li>
+                                        <li class="list-group-item"><input type="text" name="insperation" maxlength="2" size="2" /></li>
+                                    </ul>
+                                </div>-->
+                                <!-- Death Saves -->
+                                <div id="death-saves" class="col mb-2">
+                                    <ul class="list-group list-group-flush shadow-sm bg-white rounded h-100">
+                                        <li class="list-group-item"><span class="label">Death Saves</span></li>
+                                        <li class="list-group-item">
+                                            <div id="successes">
+                                                <span class="sub-label">Success</span>
+                                                <div id="success-num">
+                                                    <input class="w3-check" type="checkbox" name="success-1" />
+                                                    <input class="w3-check" type="checkbox" name="success-2" />
+                                                    <input class="w3-check" type="checkbox" name="success-3" />
+                                                </div>
+                                            </div>
+                                            <div id="failures" class="">
+                                                <span class="sub-label">Failure</span>
+                                                <div id="failure-num">
+                                                    <input class="w3-check" type="checkbox" name="failure-1" />
+                                                    <input class="w3-check" type="checkbox" name="failure-2" />
+                                                    <input class="w3-check" type="checkbox" name="failure-3" />
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Conditions -->
+                                <div id="conditions" class="col mb-2">
+                                    <span class="label">Conditions</span>
+                                    <textarea class="form-control" name="conditions" rows="5"></textarea>
+                                </div>
+                                <!-- Boons -->
+                                <div id="boons" class="col mb-2">
+                                    <span class="label">Boons</span>
+                                    <textarea class="form-control" name="boons" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="row border border-secondary rounded">
+                                <!-- Attacks -->
+                                <div class="col-12">
+                                    <table id="attacks" class="table table-striped">
+                                        <span class="label">Attacks</span>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Base Stat</th>
+                                                <th>Bonus/DC</th>
+                                                <th>Damage</th>
+                                                <th>Damage Type</th>
+                                                <th>Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="add-attack" class="col-12">
+                                    <table class="table table-borderless table-sm" style="max-width: 475px;">
+                                        <span class="label">Add a new attack:</span>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" name="att-name" /></td>
+                                                <td><span class="label">Name of the attack</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-control" name="stat">
+                                                        <option value="str">Strength</option>
+                                                        <option value="dex">Dexterity</option>
+                                                        <option value="con">Constitution</option>
+                                                        <option value="int">Intelligence</option>
+                                                        <option value="wis">Wisdom</option>
+                                                        <option value="cha">Charisma</option>
+                                                    </select>
+                                                </td>
+                                                <td><span class="label">Choose the base Stat</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-control" name="type">
+                                                        <option value="toHit">Roll to hit</option>
+                                                        <option value="save">Save DC</option>
+                                                    </select>
+                                                </td>
+                                                <td><span class="label">Choose the type of attack</span></td>
+                                            </tr>
+                                            <tr id="attack-prof">
+                                                <td><input type="checkbox" name="proficiency"></td>
+                                                <td><span class="label">Add Proficency</span></td>
+                                            </tr>
+                                            <tr id="attack-dc" style="display: none;">
+                                                <td>
+                                                    <input type="text" name="dc" /><br />
+                                                    <input type="checkbox" name="spell-dc" />
+
+                                                </td>
+                                                <td>
+                                                    <span class="label">Use Spell DC?</span> <br />
+                                                    <span class="label">Set DC</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" name="dice" /></td>
+                                                <td><span class="label">Enter Dice</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" name="bonus" /></td>
+                                                <td><span class="label">Bonus</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" name="dmg-type"></td>
+                                                <td><span class="label">Damage Type</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td col="2"><button type="button" class="btn btn-primary mt-2" onclick="att_attack() ">Add Attack</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                         <!-- -->
-                        <div id="menu3" class="container tab-pane fade"><br>
+                        <div id="menu3 " class="container tab-pane fade "><br>
                             <h3>Menu 3</h3>
                         </div>
                         <!-- Skills -->
-                        <div id="menu4" class="container tab-pane fade"><br>
+                        <div id="menu4 " class="container tab-pane fade "><br>
                             <h3>Skills</h3>
-                            <div id="skills-pane" class="row">
-                                <div id="skills" class="col-12">
-                                    <table class="table table-striped text-center">
+                            <div id="skills-pane " class="row ">
+                                <div id="skills " class="col-12 ">
+                                    <table class="table table-striped text-center ">
                                         <thead>
                                             <tr>
                                                 <th>Prof</th>
@@ -344,223 +505,223 @@
                                             </tr>
                                         </thead>
                                         <tr>
-                                            <td><input id="acrobatics-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="acrobatics-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="acrobatics-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="acrobatics-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>DEX</td>
                                             <td>Acrobatics</td>
-                                            <td><span id="acrobatics-skill">+0</span></td>
+                                            <td><span id="acrobatics-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="animal-handling-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="animal-handling-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="animal-handling-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="animal-handling-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>WIS</td>
                                             <td>Animal Handling</td>
-                                            <td><span id="animal-handling-skill">+0</span></td>
+                                            <td><span id="animal-handling-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="arcana-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="arcana-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="arcana-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="arcana-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>INT</td>
                                             <td>Arcana</td>
-                                            <td><span id="arcana-skill">+0</span></td>
+                                            <td><span id="arcana-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="athletics-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="athletics-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="athletics-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="athletics-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>STR</td>
                                             <td>Athletics</td>
-                                            <td><span id="athletics-skill">+0</span></td>
+                                            <td><span id="athletics-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="deception-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="deception-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="deception-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="deception-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>CHA</td>
                                             <td>Deception</td>
-                                            <td><span id="deception-skill">+0</span></td>
+                                            <td><span id="deception-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="history-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="history-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="history-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="history-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>INT</td>
                                             <td>History</td>
-                                            <td><span id="history-skill">+0</span></td>
+                                            <td><span id="history-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="insight-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="insight-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="insight-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="insight-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>WIS</td>
                                             <td>Insight</td>
-                                            <td><span id="insight-skill">+0</span></td>
+                                            <td><span id="insight-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="intimidation-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="intimidation-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="intimidation-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="intimidation-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>CHA</td>
                                             <td>Intimidation</td>
-                                            <td><span id="intimidation-skill">+0</span></td>
+                                            <td><span id="intimidation-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="investigation-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="investigation-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="investigation-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="investigation-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>INT</td>
                                             <td>Investigation</td>
-                                            <td><span id="investigation-skill">+0</span></td>
+                                            <td><span id="investigation-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="medicine-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="medicine-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="medicine-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="medicine-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>WIS</td>
                                             <td>Medicine</td>
-                                            <td><span id="medicine-skill">+0</span></td>
+                                            <td><span id="medicine-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="nature-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="nature-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="nature-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="nature-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>INT</td>
                                             <td>Nature</td>
-                                            <td><span id="nature-skill">+0</span></td>
+                                            <td><span id="nature-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="perception-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="perception-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="perception-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="perception-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>WIS</td>
                                             <td>Perception</td>
-                                            <td><span id="perception-skill">+0</span></td>
+                                            <td><span id="perception-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="performance-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="performance-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="performance-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="performance-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>CHA</td>
                                             <td>Performance</td>
-                                            <td><span id="performance-skill">+0</span></td>
+                                            <td><span id="performance-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="persuasion-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="persuasion-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="persuasion-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="persuasion-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>CHA</td>
                                             <td>Persuasion</td>
-                                            <td><span id="persuasion-skill">+0</span></td>
+                                            <td><span id="persuasion-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="religion-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="religion-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="religion-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="religion-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>INT</td>
                                             <td>Religion</td>
-                                            <td><span id="religion-skill">+0</span></td>
+                                            <td><span id="religion-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="sleight-hand-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="sleight-hand-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="sleight-hand-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="sleight-hand-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>DEX</td>
                                             <td>Sleight of Hand</td>
-                                            <td><span id="sleight-hand-skill">+0</span></td>
+                                            <td><span id="sleight-hand-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="stealth-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="stealth-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="stealth-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="stealth-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>DEX</td>
                                             <td>Stealth</td>
-                                            <td><span id="stealth-skill">+0</span></td>
+                                            <td><span id="stealth-skill ">+0</span></td>
                                         </tr>
                                         <tr>
-                                            <td><input id="survival-skill-prof" type="checkbox" name="prof" /></td>
-                                            <td><input id="survival-skill-expr" type="checkbox" name="expr" /></td>
+                                            <td><input id="survival-skill-prof " type="checkbox " name="prof " /></td>
+                                            <td><input id="survival-skill-expr " type="checkbox " name="expr " /></td>
                                             <td>WIS</td>
                                             <td>Survival</td>
-                                            <td><span id="survival-skill">+0</span></td>
+                                            <td><span id="survival-skill ">+0</span></td>
                                         </tr>
                                     </table>
                                 </div>
                             </div>
                         </div>
                         <!-- Features & Traits -->
-                        <div id="menu5" class="container tab-pane fade"><br>
+                        <div id="menu5 " class="container tab-pane fade "><br>
                             <h3>Features & Traits</h3>
-                            <div id="features-traits" class="row">
-                                <div class="col-12">
-                                    <label for="features">Racial Traits</label>
-                                    <textarea class="form-control" name="features" rows="5"></textarea>
+                            <div id="features-traits " class="row ">
+                                <div class="col-12 ">
+                                    <label for="features ">Racial Traits</label>
+                                    <textarea class="form-control " name="features " rows="5 "></textarea>
                                 </div>
-                                <div class="col-12">
-                                    <label for="class">Class Features</label>
-                                    <textarea class="form-control" name="class" rows="5"></textarea>
+                                <div class="col-12 ">
+                                    <label for="class ">Class Features</label>
+                                    <textarea class="form-control " name="class " rows="5 "></textarea>
                                 </div>
-                                <div class="col-12">
-                                    <label for="feats">Feats</label>
-                                    <textarea class="form-control" name="feats" rows="5"></textarea>
+                                <div class="col-12 ">
+                                    <label for="feats ">Feats</label>
+                                    <textarea class="form-control " name="feats " rows="5 "></textarea>
                                 </div>
                             </div>
                         </div>
                         <!-- Backstory -->
-                        <div id="menu6" class="container tab-pane fade"><br>
+                        <div id="menu6 " class="container tab-pane fade "><br>
                             <h3>Backstory</h3>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div id="apperance" class="col">
-                                            <span class="label">Character Apperance</span>
-                                            <div id="char-img" class="border border-secondary rounded" style="min-width:250px;width: 100%;height: 350px;"></div>
-                                            <button type="button" class="btn btn-link">Change Image</button>
+                            <div class="row ">
+                                <div class="col-12 ">
+                                    <div class="row ">
+                                        <div id="apperance " class="col ">
+                                            <span class="label ">Character Apperance</span>
+                                            <div id="char-img " class="border border-secondary rounded " style="min-width:250px;width: 100%;height: 350px; "></div>
+                                            <button type="button " class="btn btn-link ">Change Image</button>
                                         </div>
-                                        <div class="col-12 col-sm-12 col-md-6 col-lg">
-                                            <div class="row">
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                                    <span class="label">Personality Traits</span>
-                                                    <textarea class="form-control" name="personality-traits" rows="3"></textarea>
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg ">
+                                            <div class="row ">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                                                    <span class="label ">Personality Traits</span>
+                                                    <textarea class="form-control " name="personality-traits " rows="3 "></textarea>
                                                 </div>
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                                    <span class="label">Ideals</span>
-                                                    <textarea class="form-control" name="ideals" rows="3"></textarea>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                                                    <span class="label ">Ideals</span>
+                                                    <textarea class="form-control " name="ideals " rows="3 "></textarea>
                                                 </div>
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                                    <span class="label">Bonds</span>
-                                                    <textarea class="form-control" name="bonds" rows="3"></textarea>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                                                    <span class="label ">Bonds</span>
+                                                    <textarea class="form-control " name="bonds " rows="3 "></textarea>
                                                 </div>
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                                    <span class="label">Flaws</span>
-                                                    <textarea class="form-control" name="flaws" rows="3"></textarea>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-6 ">
+                                                    <span class="label ">Flaws</span>
+                                                    <textarea class="form-control " name="flaws " rows="3 "></textarea>
                                                 </div>
-                                                <div id="backstory" class="col col-12" style="min-width: 200px;">
-                                                    <span class="label">Character Backstory</span>
-                                                    <textarea class="form-control" name="backstory" rows="5"></textarea>
+                                                <div id="backstory " class="col col-12 " style="min-width: 200px; ">
+                                                    <span class="label ">Character Backstory</span>
+                                                    <textarea class="form-control " name="backstory " rows="5 "></textarea>
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-12 mt-2">
-                                    <div class="row">
-                                        <div id="name" class="col">
-                                            <span class="label">Organization or Guild</span>
-                                            <input type="text" name="name" />
+                                <div class="col-12 mt-2 ">
+                                    <div class="row ">
+                                        <div id="name " class="col ">
+                                            <span class="label ">Organization or Guild</span>
+                                            <input type="text " name="name " />
                                         </div>
-                                        <div id="symbol" class="col">
-                                            <span class="label">Guild/Org Symbol</span>
-                                            <div id="alli-img" class="border border-secondary rounded" style="min-width:150px;width: 100%;height: 150px;"></div>
-                                            <button type="button" class="btn btn-link">Change Image</button>
+                                        <div id="symbol " class="col ">
+                                            <span class="label ">Guild/Org Symbol</span>
+                                            <div id="alli-img " class="border border-secondary rounded " style="min-width:150px;width: 100%;height: 150px; "></div>
+                                            <button type="button " class="btn btn-link ">Change Image</button>
                                         </div>
-                                        <div class="col-12 col-lg">
-                                            <span class="label">Allies and Organizations</span>
-                                            <textarea class="form-control" name="allies-organizations" rows="5"></textarea>
+                                        <div class="col-12 col-lg ">
+                                            <span class="label ">Allies and Organizations</span>
+                                            <textarea class="form-control " name="allies-organizations " rows="5 "></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- -->
-                        <div id="menu7" class="container tab-pane fade"><br>
+                        <div id="menu7 " class="container tab-pane fade "><br>
                             <h3>Menu 7</h3>
                         </div>
                         <!-- Notes -->
-                        <div id="menu8" class="container tab-pane fade"><br>
+                        <div id="menu8 " class="container tab-pane fade "><br>
                             <h3>Notes</h3>
-                            <div id="notes" class="row">
-                                <div id="notes-1" class="col-12 col-md-6 col-lg-6">
-                                    <textarea class="form-control" name="notes-1" rows="5" style="width: 100%;"></textarea>
+                            <div id="notes " class="row ">
+                                <div id="notes-1 " class="col-12 col-md-6 col-lg-6 ">
+                                    <textarea class="form-control " name="notes-1 " rows="5 " style="width: 100%; "></textarea>
                                 </div>
-                                <div id="notes-2" class="col-12 col-md-6 col-lg-6">
-                                    <textarea class="form-control" name="notes-2" rows="5" style="width: 100%;"></textarea>
+                                <div id="notes-2 " class="col-12 col-md-6 col-lg-6 ">
+                                    <textarea class="form-control " name="notes-2 " rows="5 " style="width: 100%; "></textarea>
                                 </div>
                             </div>
                         </div>
@@ -574,9 +735,9 @@
     <!-- Main Container -->
 
     <!-- Footer -->
-    <div class="jumbotron text-center" style="margin-bottom:0">
-        DnD 5<sup>th</sup> Edition Character Sheet || Created by <a href="https://github.com/Chee32" target="_blank">Chee32</a> & <a href="https://github.com/lckynmbrsvn" target="_blank">lckynmbrsvn</a> ||
-        <a href="https://github.com/lckynmbrsvn/5e-Character-Sheet" target="_blank">GitHub Project</a>
+    <div class="jumbotron text-center " style="margin-bottom:0 ">
+        DnD 5<sup>th</sup> Edition Character Sheet || Created by <a href="https://github.com/Chee32 " target="_blank ">Chee32</a> & <a href="https://github.com/lckynmbrsvn " target="_blank ">lckynmbrsvn</a> ||
+        <a href="https://github.com/lckynmbrsvn/5e-Character-Sheet " target="_blank ">GitHub Project</a>
     </div>
 </body>
 

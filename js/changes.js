@@ -149,28 +149,28 @@ function updateSaves() {
 }
 
 function updateSpells() {
-    var att = $('#saves-skills select[name="spell-att"]').val();
+    var att = $('select[name="spell-att"]').val();
 
     if (att == 'none') {
-        $('#top-bar input[name="spell-dc"]').val('Na');
-        $('#spell-info input[name="dc"]').val('Na');
+        $('input[name="spell-dc"]').val('Na');
+        $('input[name="dc"]').val('Na');
         return;
     }
 
-    var base = parseInt($('#attributes input[name="' + att + '-mod"]').val()) || 0;
-    var prof = parseInt($('#top-bar input[name="proficiency"]').val()) || 0;
+    var base = parseInt($('input[name="' + att + '-mod"]').val()) || 0;
+    var prof = parseInt($('input[name="proficiency"]').val()) || 0;
 
     //Update DC
     var dc = 8 + base + prof;
-    $('#top-bar input[name="spell-dc"]').val(dc);
-    $('#spell-info input[name="dc"]').val(dc);
+    $('input[name="spell-dc"]').val(dc);
+    $('input[name="dc"]').val(dc);
 
     //Update Spell Bonus
     var bonus = base + prof;
-    $('#spell-info input[name="bonus"]').val("+" + bonus);
+    $('input[name="bonus"]').val("+" + bonus);
 
     //Update Spell Attribute
-    $('#spell-info input[name="att"]').val(att);
+    $('input[name="att"]').val(att);
 }
 
 function updateStrSkills() {
@@ -507,6 +507,7 @@ function updateWisMisc() {
     $('input[name="passive-insight"]').val(10 + parseInt(skill));
 
 }
+
 function updateIntMisc() {
     var prof = parseInt($('input[name="proficiency"]').val()) || 0;
     var base = parseInt($('input[name="int-mod"]').val()) || 0;
